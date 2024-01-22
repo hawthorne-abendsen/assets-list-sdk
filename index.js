@@ -44,10 +44,10 @@ function setIconUrl(item) {
 
 /**
  * Fetches all assets lists info from the given URL.
- * @param {string} url - The full URL to the assets lists info.
+ * @param {[string]} url - The full URL to the assets lists info. If not provided, the default URL will be used.
  * @returns {Promise<AssetsListInfo[]>} A promise that resolves to the parsed JSON object.
  */
-function fetchAllAssetsLists(url) {
+function fetchAllAssetsLists(url = 'https://hawthorne-abendsen.github.io/test-json-data/index.json') {
     if (!url)
         throw new Error('URL is required')
     return fetch(url)
